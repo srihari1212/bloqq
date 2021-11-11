@@ -19,3 +19,4 @@ Werkzeug==2.0.2
 wincertstore==0.2
 xlrd==2.0.1
 zipp==3.6.0
+gunicorn
