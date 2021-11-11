@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Details</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <style>
+    table {
+    width:100%;
+    }
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 1px;
+    text-align: left;
+    }
+    table#t01 tr:nth-child(even) {
+    background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+    }
+    table#t01 th {
+    background-color: black;
+    color: white;
+    }
+    </style>
+</head>
+<body>
+</header>
+
+	<div id="BBox" class="alert alert-success" style="margin-top:18px;">
+    <table>
+    <caption>GNT Details</caption>
+    <tr>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Blocktime</th>
+        <th>FCAS</th>
+		<th>Transaction Volume </th>
+		<th>Exchange Volume</th>
+        <th>Delas</th>
+        <th>Instance Size</th>
+        <th>GPU</th>
+    </tr>
+	{{filecoin|safe}}
+	</table>
+	</div><div id="BBox" class="alert alert-success" style="margin-top:18px;">
+	<table>
+    <caption>RLC Details</caption>
+    <tr>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Blocktime</th>
+        <th>FCAS</th>
+		<th>Transaction Volume </th>
+		<th>Exchange Volume</th>
+        <th>Delas</th>
+        <th>Instance Size</th>
+        <th>GPU</th>
+    </tr>
+	{{genaro|safe}}
+    </table>
+	</div><div id="BBox" class="alert alert-success" style="margin-top:18px;">
+	<table>
+    <caption>SNM Details</caption>
+    <tr>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Blocktime</th>
+        <th>FCAS</th>
+		<th>Transaction Volume </th>
+		<th>Exchange Volume</th>
+        <th>Delas</th>
+        <th>Instance Size</th>
+        <th>GPU</th>
+    </tr>
+	{{sia|safe}}
+    </table>
+	</div><div id="BBox" class="alert alert-success" style="margin-top:18px;">
+	<table>
+    <caption>DCP Details</caption>
+    <tr>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Blocktime</th>
+        <th>FCAS</th>
+		<th>Transaction Volume </th>
+		<th>Exchange Volume</th>
+        <th>Delas</th>
+        <th>Instance Size</th>
+        <th>GPU</th>
+    </tr>
+	{{storj|safe}}
+    </table>
+	</div>
+
+
+<div class="alert alert-info">
+<table>
+    <caption>Prediction Details</caption>
+    <tr>
+        <th>Date</th>
+        <th>Choice</th>
+        <th>Score</th>
+    </tr>
+{{table|safe}}
+    </table>
+	</div>
+
+</div>
+
+
+</body>
+</html>

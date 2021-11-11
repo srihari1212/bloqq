@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<title>Optimization Engine </title>
+<h2>Storage and Compute Optimization</h2>
+<p><b>Storage Optimization:</b> There are four storage tokes such as <span style="color:blue;font-weight:bold">
+'Filecoin', 'Genaro', 'Siacoin' and 'Storj'</span>. Each storage token is represented by the 
+9 variables e.g. <span style="color:darkgreen;font-weight:bold">'Price', 'Fee', 'Blocktime', 
+'FCAS', 'Transection Volume', 'Exchange Volume', 'Bandwidth UP', 'Bandwidth Down' and Total storage'</span>.
+The historical data against all nine variables and for all storage tokens are available. We used this
+data to train the machine learning models. Further the prediction against these variables are utilized to build 
+the optimization model. The optimization model utilizes the preference variables and the prediction model 
+to rank the storage tokens.
+</p>
+<p><b>Compute Optimization:</b> There are four compute tokes such as <span style="color:blue;font-weight:bold">
+'DCP', 'iExec(RLC)', 'Sonm(SNM)' and 'Golem(GLM)'</span>. Each storage token is represented by the 
+8 variables e.g. <span style="color:darkgreen;font-weight:bold">'Price', 'Blocktime', 
+'FCAS', 'Transection Volume', 'Exchange Volume', 'Deals', 'Instance Size' and 'GPU'</span>.
+The historical data against all eight variables and for all storage tokens are available. We used this
+data to train the machine learning models. Further the prediction against these variables are utilized to build 
+the optimization model. The optimization model utilizes the preference variables and the prediction model 
+to rank the compute tokens.
+</p>
+<div class="row">
+  <div class="column">
+  <div class="tooltip">
+  <a href="storage_engine" alt="Storage" target="_blank">
+    <img src="static/images/storage.png" alt="Storage" style="width:150px;height=150px"><span class="tooltiptext">Storage Engine</span></a> </div>
+  </div>
+  <div class="column">
+  <div class="tooltip">
+  <a href="compute_engine" target="_blank">
+    <img src="static/images/compute.png" alt="Compute" style="width:180px;height=180px"><span class="tooltiptext">Compute Engine</span></a> </div>
+  </div>
+</div>
+
+</body>
+</html>

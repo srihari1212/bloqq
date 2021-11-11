@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Optimize Token Choice</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body onLoad='init()'>
+<header class="navbar navbar-default">
+  <span class="navbar-text"> Please provide the details   
+  </span>
+</header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  border-radius: 8px;
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+} 
+
+.slidecontainer {
+  width: 10%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 10%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+<div id="BBox" class="alert alert-success" style="margin-top:18px;">
+     
+		Select Date <input type="date" value="{{ given_date }}" name="bday">
+		Predict for next
+        <input type="radio" name="days" value="10" {{ choice_10 }}> 10 Days
+		<input type="radio" name="days" value="20" {{ choice_20 }}> 20 Days
+		<input type="radio" name="days" value="30" {{ choice_30 }}> 30 Days </br>
+		Cost/Budget: <input type="range" min="0" max="10" value="{{ cost }}" class="slider" id="cost">
+		Speed: <input type="range" min="0" max="10" value="{{ speed }}" class="slider" id="speed">
+		Security: <input type="range" min="0" max="10" value="{{ security }}" class="slider" id="security">
+		Health: <input type="range" min="0" max="10" value="{{ health }}" class="slider" id="health">
+		Bandwidth: <input type="range" min="0" max="10" value="{{ bandwidth }}" class="slider" id="bandwidth">
+		Storage: <input type="range" min="0" max="10" value="{{ storage }}" class="slider" id="storage">
+		<hr>
+		<strong>Weightage</strong>
+		<p>Cost: <span id="cost-val"></span>
+		   Speed: <span id="speed-val"></span>
+		   Security: <span id="security-val"></span>
+		   Health: <span id="health-val"></span>
+		   Bandwidth: <span id="bandwidth-val"></span>
+		   Storage: <span id="storage-val"></span> </p>
+		<strong>Number of Days:</strong><strong><span>{{ servive_days }}</span></strong>
+		<strong>, Cost:</strong><strong><span>{{ predicted_cost }}</span></strong><strong>$</strong>
+		</br>   
+		<label class="btn btn-primary">
+             <a href="/" alt="Go Home">Home</a>
+        </label>
+    
+</div>
+
+<div class="alert alert-info">
+<strong>Selected Token</strong>
+<img src="{{ token_1 }}" width="150" height="150">
+<img src="{{ token_2 }}" width="150" height="150">
+<img src="{{ token_3 }}" width="150" height="150">
+<img src="{{ token_4 }}" width="150" height="150">
+<a href="/FourthModelData" target="_blank" alt="See Explanations"><strong>See Explanations</strong></a>
+</br></br></br>
+<strong style="color:red;">{{ warning}}</strong>
+</div>
+
+
+<script>
+var slider_1 = document.getElementById("cost");
+var output_1 = document.getElementById("cost-val");
+output_1.innerHTML = slider_1.value;
+
+slider_1.oninput = function() {
+  output_1.innerHTML = this.value;
+}
+var slider_2 = document.getElementById("speed");
+var output_2 = document.getElementById("speed-val");
+output_2.innerHTML = slider_2.value;
+
+slider_2.oninput = function() {
+  output_2.innerHTML = this.value;
+}
+var slider_3 = document.getElementById("security");
+var output_3 = document.getElementById("security-val");
+output_3.innerHTML = slider_3.value;
+
+slider_3.oninput = function() {
+  output_3.innerHTML = this.value;
+}
+var slider_4 = document.getElementById("health");
+var output_4 = document.getElementById("health-val");
+output_4.innerHTML = slider_4.value;
+
+slider_4.oninput = function() {
+  output_4.innerHTML = this.value;
+}
+var slider_5 = document.getElementById("bandwidth");
+var output_5 = document.getElementById("bandwidth-val");
+output_5.innerHTML = slider_5.value;
+
+slider_5.oninput = function() {
+  output_5.innerHTML = this.value;
+}
+var slider_6 = document.getElementById("storage");
+var output_6 = document.getElementById("storage-val");
+output_6.innerHTML = slider_6.value;
+
+slider_6.oninput = function() {
+  output_6.innerHTML = this.value;
+}
+</script>
+</body>
+</html>
+
